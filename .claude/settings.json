@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/enforce_ai_skills.py",
+            "timeout": 15,
+            "statusMessage": "Checking AGENTS.md capabilities layer..."
+          }
+        ]
+      }
+    ]
+  }
+}

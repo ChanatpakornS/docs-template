@@ -3,7 +3,7 @@
 Version 0.0.1
 
 A meta / boilerplate repository carrying a reusable AI development
-environment: a modular skills layer and an LLM wiki. It holds no
+environment: a modular skills layer and an LLM wiki. It holds no        
 application code — just the scaffolding pattern.
 
 ## Layout
