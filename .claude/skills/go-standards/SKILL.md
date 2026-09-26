@@ -1,3 +1,10 @@
+---
+name: go-standards
+description: Go coding standards for this repository - formatting, naming,
+  pass-by-reference rules, error handling and wrapping, context, concurrency,
+  and table-driven tests. Load before creating or modifying any .go file.
+---
+
 # Go Standards
 
 Load this file when creating or modifying `.go` files.

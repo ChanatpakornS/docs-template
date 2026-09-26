@@ -3,9 +3,9 @@
 
 Before an Edit/Write touches a file matching a row in AGENTS.md's
 "File pattern -> Load this context" table, this injects that row's
-`.ai/skills/*.md` file into the model's context (once per session per
-skill), so the standards are actually loaded instead of relying on the
-agent to remember to read them.
+`.claude/skills/*/SKILL.md` file into the model's context (once per
+session per skill), so the standards are actually loaded instead of
+relying on the agent to remember to read them.
 
 Never blocks the tool call -- this only adds context.
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 AGENTS_MD = REPO_ROOT / "AGENTS.md"
 
-# Matches markdown table rows like: | `*.go` | `.ai/skills/go-standards.md` |
+# Matches rows like: | `*.go` | `.claude/skills/go-standards/SKILL.md` |
 TABLE_ROW_RE = re.compile(r"\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|")
 
 
